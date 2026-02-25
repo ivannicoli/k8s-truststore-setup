@@ -1,0 +1,9 @@
+keytool -importcert \
+  -alias httpbin-org \
+  -file httpbin.org.pem \
+  -keystore truststore.jks \
+  -storetype JKS \
+  -storepass 'ChangeIt123!' \
+  -noprompt
+
+cp -pr 
