@@ -65,7 +65,9 @@ O script `setup-truststore.sh` consolidará os certificados dentro do volume mon
 kubectl cp scripts/setup-truststore.sh myns/mypod:/tmp/setup-truststore.sh
 
 # Acessar o pod e executar o merge
-kubectl exec -it mypod -n myns -- sh -c "cd /tmp && sh setup-truststore.sh"
+kubectl exec -it mypod -n myns -- sh
+cd /tmp
+sh setup-truststore.sh
 ```
 
 ---
@@ -101,6 +103,3 @@ kubectl get secret truststore.jks -n myns -o yaml
 ```bash
 kubectl exec -it mypod -n myns -- curl -v https://httpbin.org/get
 ```
-
----
-Mantido por Antigravity 🚀
