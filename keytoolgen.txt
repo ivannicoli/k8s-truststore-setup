@@ -5,5 +5,3 @@ keytool -importcert \
   -storetype JKS \
   -storepass 'ChangeIt123!' \
   -noprompt
-
-cp -pr 
